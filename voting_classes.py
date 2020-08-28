@@ -10,15 +10,10 @@ from web3 import Web3, HTTPProvider
 from web3.eth import HexStr
 from eth_typing import Address
 
-try:
-    from final_project.utils import RSA_MAX_DATA_SIZE, RSA_NUM_BYTES, RSA_NUM_BITS, TRUE_VOTES_DEBUG_DICT, NUM_VOTING_GROUPS, NUM_VOTERS_PER_GROUP, CANDIDATES_WEIGHTS, STARS_LINE, split_list  # type: ignore
-    from final_project.contract import ABI, compiled_contract  # type: ignore
-except ModuleNotFoundError:
-    from utils import RSA_MAX_DATA_SIZE, RSA_NUM_BYTES, RSA_NUM_BITS, TRUE_VOTES_DEBUG_DICT, NUM_VOTING_GROUPS, \
-        NUM_VOTERS_PER_GROUP, CANDIDATES_WEIGHTS
-    from contract import ABI, compiled_contract
+from utils import RSA_MAX_DATA_SIZE, RSA_NUM_BYTES, RSA_NUM_BITS, TRUE_VOTES_DEBUG_DICT, NUM_VOTING_GROUPS, CANDIDATES_WEIGHTS
+from contract import ABI, compiled_contract
 
-w3 = Web3(HTTPProvider("http://127.0.0.1:7545"))
+w3 = Web3(HTTPProvider("http://127.0.0.1:7545"))  # type: ignore
 
 
 class VotingError(Exception):

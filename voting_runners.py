@@ -4,12 +4,8 @@ from typing import List, Set
 from eth_typing import Address
 from termcolor import cprint
 
-try:
-    from final_project.utils import TRUE_VOTES_DEBUG_DICT, NUM_VOTERS_PER_GROUP, STARS_LINE, split_list, NUM_VOTERS  # type: ignore
-    from final_project.voting_classes import Candidate, Voter, CertificateAuthority, VotingError, VotingObject  # type: ignore
-except ModuleNotFoundError:
-    from utils import TRUE_VOTES_DEBUG_DICT, NUM_VOTERS_PER_GROUP, STARS_LINE, split_list, NUM_VOTERS
-    from voting_classes import Candidate, Voter, CertificateAuthority, VotingError, VotingObject
+from utils import TRUE_VOTES_DEBUG_DICT, NUM_VOTERS_PER_GROUP, STARS_LINE, split_list, NUM_VOTERS
+from voting_classes import Candidate, Voter, CertificateAuthority, VotingError, VotingObject
 
 
 class BasicVotingRunner:

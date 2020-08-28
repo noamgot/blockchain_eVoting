@@ -30,7 +30,7 @@ These 2 demands can be changed with corresponding changes in the code:
 In order to make sure that you have all the needed packages, create a new virtual environment, and install the packages in the relevenat `reuirements_*.txt` file:
 ```
 # choose either windows or linux
-pip install requirements_<windows/linux>.txt
+pip install requirements/requirements_<windows/linux>.txt
 ```
 ## Usage
 
