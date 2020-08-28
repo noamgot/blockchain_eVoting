@@ -6,24 +6,55 @@ In this project we designed and implemented an e-voting system which is based on
 
 A presentation describing the protocol can be found here: https://prezi.com/view/BelggHRsA2CRt6y3OObQ/
 
+## About this demo
+This demo contains 3 basic scenarios:
+* `main.py` - A basic scenario where the election runs end to end with no actual problems - all players are honest.
+* `main_unwanted_guest.py` - A scenario where an uneligible account joins the elections. This scenario crashes when the smart contract identifies the intfiltrator. 
+* `main_double_vote.py` - A scenario where an eligible voter tries to vote twice. This scenario also crashes when the smart contract identifies the double voting. 
+In all the scenarios we used 3 groups of 10 voters, but you can change these number to any other number (as long as there are enough Ganache accounts) in `utils.py`. In order to dig in to the details of how these scenarios actually work - check out the classes in `voting_runners.py`.
+
+All files provide a commandline indications of what's going on in the election process:
+<gif>
+
 
 ## Installation
+In order to run this project, use python 3.7 (although probably most python 3.x version will work as well). You also must have [Ganace](https://www.trufflesuite.com/ganache) installed on your machine. 
+No matter which operating system you use, make sure that:
+* There are sufficient accounts (a 100 would be enough)
+* You're listening on port 7545.
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+These 2 demands can be changed with corresponding changes in the code:
+* For changing the amount of participants in the votes, change in the number of voters (`NUM_VOTERS` in `utils.py`). Notice that this variable is dependent on 2 other variables (`NUM_VOTING_GROUPS` and `NUM_VOTERS_PER_GROUP`), so you actually need to change these variables. Also, make sure that there's at least one extra account for the Certified Authority (CA).
+* The listening port can be changed in `voting_classes.py` - change the number of port in this `w3 = Web3(HTTPProvider("http://127.0.0.1:7545"))` (replace 7545 with whatever port you choose). 
 
-```bash
-pip install foobar
+In order to make sure that you have all the needed packages, create a new virtual environment, and install the packages in the relevenat `reuirements_*.txt` file:
 ```
-
+# choose either windows or linux
+pip install requirements_<windows/linux>.txt
+```
 ## Usage
 
-```python
-import foobar
-
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
+### Windows
+Launch a new local blockchain using Ganache (we used Ganache GUI). In windows, the default listening port is 7545, so you probably don't need to change anything.
+Then, simply run one of the `main*.py`, e.g:
 ```
+python main.py
+```
+and watch the output
+
+### Linux
+In a separate shell, launch a new local blockchain using Ganache:
+```
+module load ganache-cli
+ganache-cli -a 100 -p 7545
+```
+Notice that we use 100 accounts (`-a 100`) and are listenting on port 7545 (`-p 7545`) as stated earlier. 
+
+Then, **in a different shell**, simply run one of the `main*.py`, e.g:
+```
+python main.py
+```
+and watch the output
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
