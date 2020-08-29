@@ -66,18 +66,5 @@ and watch the output
 [MIT](https://choosealicense.com/licenses/mit/)
 
 ## About the Authors
-
-<p class="aligncenter">
-<div class="row">
-  <div class="column">
-<a href="https://www.linkedin.com/in/noamgot/">
-         <img alt="Qries" src="https://media-exp1.licdn.com/dms/image/C4E03AQEdr7yU84JZ0g/profile-displayphoto-shrink_400_400/0?e=1603929600&v=beta&t=8PAjLDq8jNWU58uj9esmMRTiRJNuYzSzKFktxApvAYQ"
-         width=150" height="150">
-  </div>
-  <div class="column"> 
-<a href="https://www.linkedin.com/in/noamgot/">
-         <img alt="Qries" src="https://media-exp1.licdn.com/dms/image/C4E03AQEdr7yU84JZ0g/profile-displayphoto-shrink_400_400/0?e=1603929600&v=beta&t=8PAjLDq8jNWU58uj9esmMRTiRJNuYzSzKFktxApvAYQ"
-         width=150" height="150">
-  </div>
-</div>
-  </p>
+* [Gili Lior](https://www.linkedin.com/in/gili-lior-299636154/) - Computer Science B.Sc student at the Hebrew University of Jerusalem, Israel.
+* [Noam Gottlieb](https://www.linkedin.com/in/noamgot/) - Computer Science M.Sc student at the Hebrew University of Jerusalem, Israel.
