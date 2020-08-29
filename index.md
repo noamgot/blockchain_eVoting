@@ -1,10 +1,16 @@
+---
+layout: default
+---
+
+
 # E-Voting on a blockchain using smart contracts
-This is a final project done in the course "Introductio to Cryptographic Currencies" in the Hebrew University of Jerusalem.
+This is a final project done in the course "Introduction to Cryptographic Currencies" in the Hebrew University of Jerusalem.
 The project was done together with Gili Lior. 
 
 In this project we designed and implemented an e-voting system which is based on a dedicated blockchain, and using an Ethereum smart contract. The system is simulated via a python script that connects to a local Etherum blockchain running using Ganache. The smart contract was written in Solidity.
 
-A presentation describing the protocol can be found here: https://prezi.com/view/BelggHRsA2CRt6y3OObQ/
+A presentation describing the protocol can be found [here](https://prezi.com/view/BelggHRsA2CRt6y3OObQ/).
+
 
 ## About this demo
 This demo contains 3 basic scenarios:
@@ -14,7 +20,6 @@ This demo contains 3 basic scenarios:
 In all the scenarios we used 3 groups of 10 voters, but you can change these number to any other number (as long as there are enough Ganache accounts) in `utils.py`. In order to dig in to the details of how these scenarios actually work - check out the classes in `voting_runners.py`.
 
 All files provide a commandline indications of what's going on in the election process:
-<gif>
 
 
 ## Installation
@@ -28,7 +33,7 @@ These 2 demands can be changed with corresponding changes in the code:
 * The listening port can be changed in `voting_classes.py` - change the number of port in this `w3 = Web3(HTTPProvider("http://127.0.0.1:7545"))` (replace 7545 with whatever port you choose). 
 
 In order to make sure that you have all the needed packages, create a new virtual environment, and install the packages in the relevenat `reuirements_*.txt` file:
-```
+```bash
 # choose either windows or linux
 pip install requirements/requirements_<windows/linux>.txt
 ```
@@ -37,24 +42,35 @@ pip install requirements/requirements_<windows/linux>.txt
 ### Windows
 Launch a new local blockchain using Ganache (we used Ganache GUI). In windows, the default listening port is 7545, so you probably don't need to change anything.
 Then, simply run one of the `main*.py`, e.g:
-```
+```bash
 python main.py
 ```
 and watch the output
 
 ### Linux
 In a separate shell, launch a new local blockchain using Ganache:
-```
+```bash
 module load ganache-cli
 ganache-cli -a 100 -p 7545
 ```
 Notice that we use 100 accounts (`-a 100`) and are listenting on port 7545 (`-p 7545`) as stated earlier. 
 
 Then, **in a different shell**, simply run one of the `main*.py`, e.g:
-```
+```bash
 python main.py
 ```
 and watch the output
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
+
+
+### Small image
+
+![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png)
+
+### Large image
+
+![Branching](https://guides.github.com/activities/hello-world/branching.png)
+
+
