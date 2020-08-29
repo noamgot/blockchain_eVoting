@@ -19,8 +19,6 @@ This demo contains 3 basic scenarios:
 * `main_double_vote.py` - A scenario where an eligible voter tries to vote twice. This scenario also crashes when the smart contract identifies the double voting. 
 In all the scenarios we used 3 groups of 10 voters, but you can change these number to any other number (as long as there are enough Ganache accounts) in `utils.py`. In order to dig in to the details of how these scenarios actually work - check out the classes in `voting_runners.py`.
 
-All files provide a commandline indications of what's going on in the election process:
-
 
 ## Installation
 In order to run this project, use python 3.7 (although probably most python 3.x version will work as well). You also must have [Ganace](https://www.trufflesuite.com/ganache) installed on your machine. 
