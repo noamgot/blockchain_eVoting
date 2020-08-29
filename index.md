@@ -12,6 +12,9 @@ Here's a presentation describing the protocol and the general design choices we'
 
 <iframe width="550" height="400" src="https://prezi.com/view/BelggHRsA2CRt6y3OObQ/embed" webkitallowfullscreen="1" mozallowfullscreen="1" allowfullscreen="1"></iframe>
 
+A more detailed paper about this work can be found [here](https://noamgot.github.io/blockchain_eVoting/docs/Blockchain-based%20eVoting.pdf).
+
+
 ## About this demo
 This demo contains 3 basic scenarios:
 * `main.py` - A basic scenario where the election runs end to end with no actual problems - all players are honest.
