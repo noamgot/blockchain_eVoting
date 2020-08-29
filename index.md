@@ -8,7 +8,7 @@ The project was done together with Gili Lior.
 
 In this project we designed and implemented an e-voting system which is based on a dedicated blockchain, and using an Ethereum smart contract. The system is simulated via a python script that connects to a local Etherum blockchain running using Ganache. The smart contract was written in Solidity.
 
-A presentation describing the protocol can be found [here](https://prezi.com/view/BelggHRsA2CRt6y3OObQ/).
+Here's a presentation describing the protocol and the general design choices we've made:
 
 <iframe width="550" height="400" src="https://prezi.com/view/BelggHRsA2CRt6y3OObQ/embed" webkitallowfullscreen="1" mozallowfullscreen="1" allowfullscreen="1"></iframe>
 
