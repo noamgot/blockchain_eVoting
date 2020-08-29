@@ -65,3 +65,6 @@ and watch the output
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
 
+### Small image
+
+[TEST](![Test](https://media-exp1.licdn.com/dms/image/C4E03AQEdr7yU84JZ0g/profile-displayphoto-shrink_400_400/0?e=1603929600&v=beta&t=8PAjLDq8jNWU58uj9esmMRTiRJNuYzSzKFktxApvAYQ))
