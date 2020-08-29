@@ -10,6 +10,7 @@ In this project we designed and implemented an e-voting system which is based on
 
 A presentation describing the protocol can be found [here](https://prezi.com/view/BelggHRsA2CRt6y3OObQ/).
 
+<iframe width="550" height="400" src="https://prezi.com/view/BelggHRsA2CRt6y3OObQ/embed" webkitallowfullscreen="1" mozallowfullscreen="1" allowfullscreen="1"></iframe>
 
 ## About this demo
 This demo contains 3 basic scenarios:
