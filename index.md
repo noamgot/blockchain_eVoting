@@ -65,6 +65,19 @@ and watch the output
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
 
-### Small image
+## About the Authors
 
-[TEST](![Test](https://media-exp1.licdn.com/dms/image/C4E03AQEdr7yU84JZ0g/profile-displayphoto-shrink_400_400/0?e=1603929600&v=beta&t=8PAjLDq8jNWU58uj9esmMRTiRJNuYzSzKFktxApvAYQ))
+<p class="aligncenter">
+<div class="row">
+  <div class="column">
+<a href="https://www.linkedin.com/in/noamgot/">
+         <img alt="Qries" src="https://media-exp1.licdn.com/dms/image/C4E03AQEdr7yU84JZ0g/profile-displayphoto-shrink_400_400/0?e=1603929600&v=beta&t=8PAjLDq8jNWU58uj9esmMRTiRJNuYzSzKFktxApvAYQ"
+         width=150" height="150">
+  </div>
+  <div class="column"> 
+<a href="https://www.linkedin.com/in/noamgot/">
+         <img alt="Qries" src="https://media-exp1.licdn.com/dms/image/C4E03AQEdr7yU84JZ0g/profile-displayphoto-shrink_400_400/0?e=1603929600&v=beta&t=8PAjLDq8jNWU58uj9esmMRTiRJNuYzSzKFktxApvAYQ"
+         width=150" height="150">
+  </div>
+</div>
+  </p>
