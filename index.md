@@ -2,7 +2,6 @@
 layout: default
 ---
 
-
 # Introduction
 This is a final project done in the course "Introduction to Cryptographic Currencies" in the Hebrew University of Jerusalem.
 The project was done together with Gili Lior. 
