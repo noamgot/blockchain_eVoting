@@ -10,7 +10,7 @@ RSA_MAX_DATA_SIZE = RSA_NUM_BYTES - 42
 CANDIDATES = ['Alice', 'Bob', 'Charlie', 'Donna']
 # probabilities of each candidate to be chosen. Change to get various election results!
 CANDIDATES_WEIGHTS = [0.25, 0.25, 0.25, 0.25]
-TRUE_VOTES_DEBUG_DICT = {c: 0 for c in CANDIDATES}
+TRUE_VOTES_DEBUG_DICT = None  # {c: 0 for c in CANDIDATES}
 STARS_LINE = "*" * 100
 
 

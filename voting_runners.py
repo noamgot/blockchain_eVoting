@@ -1,4 +1,5 @@
 import random
+import time
 from typing import List, Set
 
 from eth_typing import Address
@@ -72,7 +73,10 @@ class BasicVotingRunner:
 
         voting_results = self.ca.count_votes()
         for cand in [c.get_name() for c in self.all_candidates]:
-            cprint(f"{cand} got {voting_results[cand]} votes (true votes: {TRUE_VOTES_DEBUG_DICT[cand]})", "green")
+            if TRUE_VOTES_DEBUG_DICT is None:
+                cprint(f"{cand} got {voting_results[cand]} votes", "green")
+            else:
+                cprint(f"{cand} got {voting_results[cand]} votes (true votes: {TRUE_VOTES_DEBUG_DICT[cand]})", "green")
 
     def _run_all_groups_voting(self, contract_address: Address):
         for group_idx, group in enumerate(self.voters_groups):
@@ -101,7 +105,11 @@ class BasicVotingRunner:
             group_idx = voting_object.get_group_idx()
             publisher = self.voters_groups[group_idx][0]
             print(f"{publisher} publishes the votes of group {group_idx}")
-            publisher.publish_vote_to_contract(voting_object)
+            try:
+                publisher.publish_vote_to_contract(voting_object)
+            except ValueError:
+                raise VotingError("Publishing votes failed (caught by the smart contract)!!!")
+
 
 
 class VotingRunnerUnwantedGuest(BasicVotingRunner):
@@ -110,6 +118,8 @@ class VotingRunnerUnwantedGuest(BasicVotingRunner):
     def __init__(self, num_voters: int, candidates: List[str]):
         super().__init__(num_voters, candidates)
         unwanted_guest = Voter(NUM_VOTERS)
+        cprint(f"!!! ADDING UNAUTHROIZED VOTER: {unwanted_guest} TO GROUP {len(self.voters_groups) -1 }!!!", "red")
+        time.sleep(3)
         self.voters_groups[-1].append(unwanted_guest)
         self.ca.voting_objects[-1].voters_addresses.add(unwanted_guest.address.encode())
 
@@ -122,9 +132,11 @@ class VotingRunnerDoubleVote(BasicVotingRunner):
             group_voting_object = self._run_single_group_voting(contract_address, group, group_idx)
 
             if group_idx == 0:
+                cprint("!!! DUPLICATING THE LAST VOTE IN VOTING GROUP 0 !!!", "red")
                 # duplicate last vote before signing for group 0
                 votes = group_voting_object.get_votes()
                 fake_votes = votes + [votes[-1]]
                 random.shuffle(fake_votes)
                 group_voting_object.set_votes(fake_votes)
+                time.sleep(3)
             self._sign_voting_object(group, group_idx, group_voting_object)
